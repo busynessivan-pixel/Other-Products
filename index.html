@@ -3,98 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Online Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cyber1 | Computer Shop</title>
+    <style>
+        /* Modern Assassin Theme Styling */
+        body {
+            background-image: url('https://i.imgur.com/TLB9pXG.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            min-height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #f4f4f4;
+        }
+
+        header {
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 2px solid #28a745;
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ac-logo {
+            width: 32px;
+            height: 32px;
+            fill: #28a745;
+            filter: drop-shadow(0 0 5px rgba(40, 167, 69, 0.5));
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #28a745;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(40, 167, 69, 0.3);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero .creed {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #28a745;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            display: block;
+            font-family: serif;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: rgba(15, 15, 15, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 240px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: #28a745;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            background: #fff; /* White background for product visibility */
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            height: 2.4em;
+            overflow: hidden;
+        }
+
+        .price {
+            display: block;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            cursor: pointer;
+            border-radius: 6px;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(10, 10, 10, 0.95);
+            color: #777;
+            margin-top: 50px;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { flex-direction: column; gap: 15px; }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Cyber1</div>
+            <div class="logo-container">
+                <svg class="ac-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5 L15 85 L35 85 L50 45 L65 85 L85 85 Z M50 15 L78 80 L68 80 L50 35 L32 80 L22 80 Z" />
+                    <path d="M50 55 L42 75 L50 70 L58 75 Z" />
+                </svg>
+                <div class="logo">Cyber1</div>
+            </div>
             <ul>
-                <li><a href="https://cyber10108.github.io/margallo.net/">Home</a></li>
-                <li><a href="https://soulreaperkayn3-a11y.github.io/computer-shop.com/">Products (1)</a></li>
+                <li><a href="https://fuck-dragon.github.io/margallo.net/">Home</a></li>
+                <li><a href="https://soulreaperkayn3-a11y.github.io/computer-shop.com/">Products</a></li>
                 <li><a href="https://forms.gle/2Vhvrn7phENxfG6s9">Cart (0)</a></li>
-                <li><a href="https://paypal.me/JMargallo699">Donate (0)</a></li>
+                <li><a href="https://paypal.me/JMargallo699">Donate</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Welcome to Our Store</h1>
-            <p>Quality products at your fingertips.</p>
+            <h1>Welcome to Cyber1</h1>
+            <span class="creed">"Nothing is true, everything is permitted."</span>
         </section>
 
         <section class="products">
             <div class="product-card">
-                <img src="https://i.imgur.com/udoIc6Q.jpeg" alt="Product 1">
+                <img src="https://i.imgur.com/udoIc6Q.jpeg" alt="HP System Unit">
                 <h3>HP System Unit</h3>
-                <p>Php 2,999</p>
-                <a href="https://forms.gle/2Vhvrn7phENxfG6s9">
-                <button>Add to Cart</button>
-                </a>
+                <span class="price">Php 2,999</span>
+                <a href="https://forms.gle/2Vhvrn7phENxfG6s9"><button>Add to Cart</button></a>
             </div>
             <div class="product-card">
-                <img src="https://i.imgur.com/iABV3B9.jpeg" alt="Product 1">
+                <img src="https://i.imgur.com/iABV3B9.jpeg" alt="1TB Seagate">
                 <h3>1TB Seagate Barracuda HDD</h3>
-                <p>Php 799</p>
-                <a href="https://forms.gle/2Vhvrn7phENxfG6s9">
-                <button>Add to Cart</button>
-                </a>
+                <span class="price">Php 799</span>
+                <a href="https://forms.gle/2Vhvrn7phENxfG6s9"><button>Add to Cart</button></a>
             </div>
             <div class="product-card">
-                <img src="https://i.imgur.com/VmQ2wQL.jpeg" alt="Product 1">
+                <img src="https://i.imgur.com/VmQ2wQL.jpeg" alt="1TB WD Blue">
                 <h3>1TB WD Blue SATA</h3>
-                <p>Php 1,799</p>
-                <a href="https://forms.gle/2Vhvrn7phENxfG6s9">
-                <button>Add to Cart</button>
-                </a>
+                <span class="price">Php 1,799</span>
+                <a href="https://forms.gle/2Vhvrn7phENxfG6s9"><button>Add to Cart</button></a>
             </div>
             <div class="product-card">
-                <img src="https://i.imgur.com/DnN9g5b.png" alt="Product 2">
+                <img src="https://i.imgur.com/DnN9g5b.png" alt="SATA USB Adapter">
                 <h3>SATA USB Adapter</h3>
-                <p>Php 399</p>
-                <a href="https://forms.gle/2Vhvrn7phENxfG6s9">
-                <button>Add to Cart</button>
-                </a>
+                <span class="price">Php 399</span>
+                <a href="https://forms.gle/2Vhvrn7phENxfG6s9"><button>Add to Cart</button></a>
             </div>
             <div class="product-card">
-                <img src="https://i.imgur.com/GzPrfAS.png" alt="Product 3">
+                <img src="https://i.imgur.com/GzPrfAS.png" alt="Sandisk 64GB">
                 <h3>Sandisk FlashDrive 64GB</h3>
-                <p>Php 199</p>
-                <a href="https://forms.gle/2Vhvrn7phENxfG6s9">
-                <button>Add to Cart</button>
-                </a>
+                <span class="price">Php 199</span>
+                <a href="https://forms.gle/2Vhvrn7phENxfG6s9"><button>Add to Cart</button></a>
             </div>
             <div class="product-card">
-                <img src="https://i.imgur.com/jSuB4B0.png" alt="Product 3">
+                <img src="https://i.imgur.com/jSuB4B0.png" alt="Micro SD">
                 <h3>Micro SD</h3>
-                <p>Php 199</p>
-                <a href="https://forms.gle/2Vhvrn7phENxfG6s9">
-                <button>Add to Cart</button>
-                </a>
+                <span class="price">Php 199</span>
+                <a href="https://forms.gle/2Vhvrn7phENxfG6s9"><button>Add to Cart</button></a>
             </div>
             <div class="product-card">
-                <img src="https://i.imgur.com/BLCnAe3.png" alt="Product 3">
+                <img src="https://i.imgur.com/BLCnAe3.png" alt="Wifi Repeater">
                 <h3>Wifi Repeater</h3>
-                <p>Php 499</p>
-                <a href="https://forms.gle/2Vhvrn7phENxfG6s9">
-                <button>Add to Cart</button>
-                </a>
+                <span class="price">Php 499</span>
+                <a href="https://forms.gle/2Vhvrn7phENxfG6s9"><button>Add to Cart</button></a>
             </div>
             <div class="product-card">
-                <img src="https://i.imgur.com/2ggocVc.png" alt="Product 3">
+                <img src="https://i.imgur.com/2ggocVc.png" alt="Wifi Adapter">
                 <h3>Wifi Adapter</h3>
-                <p>Php 199</p>
-                <a href="https://forms.gle/2Vhvrn7phENxfG6s9">
-                <button>Add to Cart</button>
-                </a>
+                <span class="price">Php 199</span>
+                <a href="https://forms.gle/2Vhvrn7phENxfG6s9"><button>Add to Cart</button></a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Cyber1. All rights reserved.</p>
+        <p>&copy; 2025 Cyber1. We work in the dark to serve the light.</p>
     </footer>
 </body>
 </html>
